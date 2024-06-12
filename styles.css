@@ -1,0 +1,591 @@
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
+
+.menu-box {
+    display: flex;
+    justify-content: space-around;
+    width: 220px;
+    height: 70px;
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    border-radius: 25px;
+    padding: 10px;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+    position: fixed;
+    bottom: 70px;
+    align-items: center; 
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+}
+
+.menu-button {
+    width: 60px;
+    height: 60px;
+    background-color: white;
+    border: 1.5px solid transparent;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    outline: none;
+}
+
+.menu-button:hover {
+    border: 1.5px solid rgba(0, 0, 0, .3);
+
+}
+
+.menu-button-select{
+    width: 60px;
+    height: 60px;
+    background-color: #ACACAC;
+    border: 1.5px solid rgba(255, 255, 255, 0.3); 
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-button img {
+    width: 24px;
+    height: 26px;
+}
+
+
+.menu-button-select img {
+    width: 24px;
+    height: 26px;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    10%, 30%, 50%, 70%, 90% { transform: translateX(-3px); }
+    20%, 40%, 60%, 80% { transform: translateX(3px); }
+}
+
+#clip-button.shake {
+    animation: shake 0.5s cubic-bezier(.36,.07,.19,.97) both;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+}
+
+
+body {
+    font-family: "pretendard", sans-serif;
+
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    color: #5D5D5D;
+}
+
+.container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.about {
+    margin-top: 150px;
+    padding: 0px 0;
+    margin-bottom: 150px;
+}
+
+h1 {
+    margin-top: 0;
+    font-family: "pretendard", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 24px;
+}
+
+h2 {
+    margin-top: 0;
+    font-family: "pretendard", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+
+h3 {
+    margin-top: 0;
+    font-family: "pretendard", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #ACACAC;
+}
+
+p{
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-family: "pretendard", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 150%;
+}
+
+p2{
+    margin-top: 0;
+    font-family: "pretendard", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    color: #5D5D5D; /* 텍스트 컬러 변경 */
+    opacity: 50%;
+    line-height: 150%;
+}
+
+.project-description a{
+    margin-top: 0;
+    font-family: "pretendard", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    color: #5D5D5D;
+    opacity: 50%;
+    line-height: 150%;
+}
+
+button {
+    border: none;
+    margin: 0;
+    font-family: "pretendard", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 14px;
+    opacity: 100%;
+}
+
+a {
+    color: #5D5D5D;
+    text-decoration: underline;
+}
+
+.projects {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.project {
+    margin: 0;
+    margin-top: 50px;
+    margin-bottom: 150px;
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+    gap: 50px;
+}
+
+.thumbnail-container {
+    position: relative;
+}
+
+
+.project img {
+    width: 100%;
+    height: 300px;
+    object-fit:cover;
+    border-radius: 10px;
+}
+
+
+.project-link img{
+    border-radius: 0px;
+}
+
+
+.project-link {
+    position: absolute;
+    align-items: center;
+    top: 15px;
+    right: 10px;
+    text-decoration: none;
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(3px);
+    color: #5D5D5D;
+    padding: 5px 15px;
+    vertical-align: sub;
+    border: 1px solid rgba(255, 255, 255, 0.9);
+    border-radius: 100px;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.2s ease-in-out;
+}
+
+
+.project-link:hover {
+    background-color: rgba(255, 255, 255, .6);
+
+}
+
+
+.project-link img { 
+    object-fit: fill;
+    margin-right: 8px;
+    width: 15px;
+    height: 15px;
+    vertical-align:sub;
+}
+
+.about-link {
+    font-size: 18px;
+    color: #5D5D5D;
+    position:relative;
+    align-items: center;
+    right: 15px;
+    background-color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    transition: all 0.2s ease-in-out;
+}
+
+
+.about-link:hover {
+    background-color: #d8d8d8;
+}
+
+
+.about-link img {
+    object-fit: fill;
+    margin-right: 8px;
+    width: 20px;
+    height: 20px;
+    vertical-align:sub;
+    opacity: 70%;
+}
+
+.project-index{
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+
+}
+
+.project-icon {
+    width: 40px;
+    height: 40px;
+    display:inline-block;
+    margin-right: 10px;
+
+    text-decoration: none;
+    border: 1px solid #5D5D5D;
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(3px);
+    vertical-align: sub;
+    border-radius: 100px; 
+    outline: none;
+    transition: all 0.2s ease-in-out;
+    z-index: 0;
+}
+
+.project-icon img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    width: 20px;
+    height: 20px;
+    object-fit:contain;
+    border-radius: 0;
+}
+
+
+.num{
+    position: absolute;
+    text-align:center;
+    font-weight: 400;
+    font-size: 12px;
+
+    line-height : 20px;
+
+    width: 20px;
+    height: 20px;
+
+    border-radius: 100px;
+    top: -7px;
+    right: -7px;
+
+    background-color:#5D5D5D;
+
+    color:white;
+
+}
+
+
+
+.project-info {
+    display: flex;
+}
+
+.about-info {
+    display: flex;
+    margin-bottom: 40px;
+}
+
+.award-info {
+    display: flex;
+    margin-bottom: 40px;
+}
+
+.talk-info {
+    display: flex;
+    margin-bottom: 40px;
+}
+
+
+.project-title {
+    width: 200px;
+}
+
+.collects-title {
+    width: 200px;
+}
+
+.talk-title {
+    width: 800px;
+}
+
+.collects-title {
+    width: 150px;
+}
+
+.collects-menu {
+    width: 150px;
+    color:#ACACAC;
+}
+
+
+.project-description {
+    width: 600px;
+}
+
+.about-title {
+    width: 300px;
+}
+
+.about-description {
+    width: 500px;
+}
+
+.award {
+    width: 200px;
+}
+
+.project h2 {
+    margin-top: 0;
+}
+
+.right-panel {
+    top: 30px;
+    right: 15px;
+    position: relative;
+    color: #5D5D5D;
+    border-radius: 10px;
+    transition: all 0.2s ease-in-out;
+}
+
+
+.section.link {
+    opacity: 50%;
+    margin: 0px;
+    margin-left: 5px;
+    border-radius: 10px;
+    width: 50px; 
+    height: 50px; 
+    box-sizing: border-box;
+    display: inline-block;
+    position: relative;
+    transition: all 0.3s ease, color 0.3s ease; 
+}
+
+.section.link:first-child {
+    margin-left: 0;
+}
+
+.section.link a {
+    display: block; 
+    width: 120%;
+    height: 120%;
+    text-decoration: none;
+}
+
+.section.link img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    width: 25px;
+    height: 25px;
+    object-fit: cover;
+}
+
+.section.link:hover {
+    background-color: #d8d8d8;
+}
+
+@media (max-width: 800px) {
+
+    p{
+        font-size: 14px;
+    }
+
+    h3{
+        margin-top: 50px;
+    }
+
+    .container {
+        width: 100%;
+        box-sizing:border-box;
+        max-width: 320px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    .about {
+        margin-top: 100px;
+        padding: 0px 0;
+        margin-bottom: 50px;
+    }
+
+    .projects {
+        gap: 20px;
+        max-width: 360px;
+    }
+
+
+    .project {
+        max-width: 360px;
+        margin: 0;
+        margin-top: 0px;
+        padding: 0px;
+        gap: 0px;
+    }
+
+    .project-link {
+        position: absolute;
+        align-items: center;
+        top: 260px;
+        right: 10px;
+        text-decoration: none;
+        font-size: 12px;
+        background-color: rgba(255, 255, 255, 0.8);
+        backdrop-filter: blur(3px);
+        color: rgba(0, 0, 0, 0.3);
+        padding: 5px 15px;
+        vertical-align: sub;
+        border: 1px solid rgba(0, 0, 0, 0.3);
+        border-radius: 100px;
+        cursor: pointer;
+        outline: none;
+        transition: all 0.2s ease-in-out;
+    }
+
+    .project-link img{
+        opacity: 30%;
+    }
+    
+    p{
+        max-width: 360px;
+        width: 100%;
+    }
+
+    
+    .project-info {
+    display: inline;
+    margin-bottom: 100px;
+}
+
+    .about-info{
+        max-width: 30px;
+        display: inline;
+    }
+
+    .award-info {
+        display: inline;
+        margin-bottom: 0px;
+        margin: 0;
+        padding: 0;
+    }
+
+    .award{
+        width: 320px;
+        margin-bottom: 20px;
+    }
+
+
+    .award a{
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+
+    .award p2{
+        margin-top: 0;
+        padding-top: 0;
+    }
+
+    .thumbnail-container {
+        position: relative;
+        margin-bottom: 30px;
+    }
+    
+
+    .project-description {
+        max-width: 320px;
+    }
+
+    .project-title {
+        width: 320px;
+        margin-bottom: 20px;
+    }
+
+    .about-title {
+        width: 320px;
+        margin-bottom: 10px;
+    }
+
+    .about-description {
+        width: 320px;
+    }
+
+
+    .project-description {
+        width: 360px;
+    }
+
+    .project-description a{
+        margin-top: 0;
+        font-family: "pretendard", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 16px;
+        color: #5D5D5D;
+        opacity: 50%;
+        line-height: 150%;
+    }
+
+
+
+
+    p2{
+        margin-top: 0;
+        margin-bottom: 5px;
+        font-family: "pretendard", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 12px;
+        line-height:0;
+    }
+
+
+}
