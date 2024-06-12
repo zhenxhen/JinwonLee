@@ -510,6 +510,11 @@ a {
     margin-bottom: 100px;
 }
 
+    
+.project-info p{
+    max-width: 280px;
+}
+
     .about-info{
         max-width: 30px;
         display: inline;
