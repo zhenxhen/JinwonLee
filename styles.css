@@ -135,6 +135,17 @@ h3 {
     color: #ACACAC;
 }
 
+h4{
+    margin: 0;
+    text-align: center;
+    font-family: "pretendard", sans-serif;
+    font-weight: 400;
+    font-style:italic;
+    font-size: 16px;
+    color: #ACACAC;
+
+}
+
 p{
     margin-top: 0;
     margin-bottom: 5px;
@@ -517,7 +528,7 @@ a {
         padding: 20px;
         background-color: #fafafa;
         border: 1px solid #E7E7E7;
-        border-radius: 15px;
+        border-radius: 30px;
     }
 
     .project-link {
@@ -551,17 +562,18 @@ a {
     
     .project-info {
     display: inline;
-    margin-bottom: 10px;
+    margin-bottom: 0px;
 }
 
     
-.project-info p{
-    max-width: 280px;
-}
+    .project-info p{
+        max-width: 280px;
+    }
 
     .about-info{
-        max-width: 30px;
+        max-width: 0px;
         display: inline;
+        margin-bottom: 0px;
     }
 
     .award-info {
@@ -593,7 +605,7 @@ a {
     
 
     .project-description {
-        max-width: 320px;
+        max-width: 280px;
     }
 
     .project-title {
@@ -610,11 +622,10 @@ a {
         width: 280px;
         margin-bottom: 20px;
     }
-s
 
 
     .project-description {
-        width: 360px;
+        width: 2800px;
     }
 
     .project-description a{
