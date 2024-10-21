@@ -1,54 +1,151 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f2f2f7;
+@import url("https://use.typekit.net/bwc6luq.css");
+
+* {
     margin: 0;
     padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    box-sizing: border-box;
 }
 
-.chat-container {
-    width: 90%;
-    max-width: 400px;
-    border: 1px solid #ccc;
-    border-radius: 20px;
+body, html {
+    height: 100%;
+    font-family: "margot", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+
+.background {
+    height: 100%;
+    background: linear-gradient(to bottom, #f0f8ff, #4682b4); /* 상-하 그라데이션 */
+    position: relative;
     overflow: hidden;
-    background-color: white;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.chat-box {
-    height: 400px;
-    overflow-y: auto;
-    padding: 15px;
-    background-color: #e5e5ea;
-    border-bottom: 1px solid #ccc;
+.bg{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
 }
 
-.input-box {
+
+.moving-files {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+
+
+.file {
+    position: absolute;
+    width: 130vh;
+    height: 130vh;
+    object-fit: contain;
+    animation-timing-function: linear;
+    opacity: 0.8;
+}
+
+.file1-1 {
+    animation: move1 100s linear infinite;
+}
+.file1-2 {
+    animation: move2 100s linear infinite;
+}
+
+.file1-3 {
+    animation: move3 100s linear infinite;
+}
+
+.file2-1 {
+    animation: move1 20s linear infinite;
+}
+
+.file2-2 {
+    animation: move2 20s linear infinite;
+}
+.file2-3 {
+    animation: move3 20s linear infinite;
+}
+
+.file3-1 {
+    width: 130vh;
+    height: 130vh;
+    animation: move1 50s linear infinite;
+}
+
+.file3-2 {
+    width: 130vh;
+    height: 130vh;
+    animation: move2 50s linear infinite;
+}
+.file3-3 {
+    width: 130vh;
+    height: 130vh;
+    animation: move3 50s linear infinite;
+}
+
+
+@keyframes move1 {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes move2 {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes move3 {
+    0% {
+        transform: translateX(200%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+
+.popup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 500px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px); /* 백그라운드 블러 */
+    border: solid 1px rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
     display: flex;
-    padding: 10px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
 }
 
-.input-box input {
-    flex-grow: 1;
-    border: 1px solid #ccc;
-    border-radius: 18px;
-    padding: 10px 15px;
-    margin-right: 10px;
+.logo {
+    width: 200px;
+    height: auto;
+    margin-bottom: 20px;
 }
 
-.input-box button {
-    background-color: #007aff;
-    color: white;
-    border: none;
-    border-radius: 18px;
-    padding: 10px 15px;
-    cursor: pointer;
-}
-
-.input-box button:hover {
-    background-color: #0056b3;
+.description {
+    color: #fff;
+    font-size: 30px;
 }
