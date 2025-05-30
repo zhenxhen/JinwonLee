@@ -137,11 +137,11 @@ h3 {
 
 h4{
     margin: 0;
-    text-align: center;
+    text-align: left;
     font-family: "pretendard", sans-serif;
-    font-weight: 400;
-    font-style:italic;
-    font-size: 16px;
+    font-weight: 600;
+    /* font-style:italic; */
+    font-size: 18px;
     color: #ACACAC;
 
 }
@@ -663,5 +663,268 @@ a {
         }
     }
 
+/* Feedbacks Section Styles */
+.feedbacks-section {
+    margin-top: 30px;
+    padding: 20px 0;
+    border-top: 1px solid #E7E7E7;
+}
 
+.feedbacks-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.feedbacks-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.feedbacks-title {
+    font-family: "pretendard", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #5D5D5D;
+    margin: 0;
+}
+
+.feedbacks-count {
+    background-color: #f0f0f0;
+    color: #5D5D5D;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.feedbacks-controls {
+    display: flex;
+    gap: 8px;
+}
+
+.scroll-button {
+    width: 32px;
+    height: 32px;
+    border: 1px solid #E7E7E7;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    outline: none;
+}
+
+.scroll-button:hover {
+    background: #f5f5f5;
+    border-color: #d0d0d0;
+}
+
+.scroll-button:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+.scroll-button:disabled:hover {
+    background: white;
+    border-color: #E7E7E7;
+}
+
+.scroll-button::after {
+    content: '';
+    width: 0;
+    height: 0;
+}
+
+.scroll-button.prev::after {
+    border-right: 6px solid #5D5D5D;
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+    margin-right: 2px;
+}
+
+.scroll-button.next::after {
+    border-left: 6px solid #5D5D5D;
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+    margin-left: 2px;
+}
+
+.youtube-cards-container {
+    display: flex;
+    gap: 15px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding-bottom: 5px;
+}
+
+.youtube-cards-container::-webkit-scrollbar {
+    display: none;
+}
+
+.youtube-cards-container {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.youtube-card {
+    background: #ffffff;
+    border: 1px solid #E7E7E7;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+    flex-shrink: 0;
+    width: 250px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+}
+
+.youtube-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    border-color: #d0d0d0;
+}
+
+.youtube-thumbnail {
+    position: relative;
+    width: 100%;
+    height: 140px;
+    background-color: #f5f5f5;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.youtube-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 32px;
+    height: 32px;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.play-button::after {
+    content: '';
+    width: 0;
+    height: 0;
+    border-left: 8px solid white;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    margin-left: 2px;
+}
+
+.youtube-card:hover .play-button {
+    background: rgba(255, 0, 0, 0.9);
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+.youtube-info {
+    padding: 8px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.youtube-title {
+    font-family: "pretendard", sans-serif;
+    font-weight: 500;
+    font-size: 11px;
+    color: #5D5D5D;
+    margin: 0 0 4px 0;
+    line-height: 1.3;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.youtube-channel {
+    font-family: "pretendard", sans-serif;
+    font-size: 9px;
+    color: #ACACAC;
+    margin: 0;
+}
+
+.youtube-meta {
+    font-family: "pretendard", sans-serif;
+    font-size: 8px;
+    color: #ACACAC;
+    margin: 2px 0 0 0;
+}
+
+/* Mobile Responsive for YouTube Cards */
+@media (max-width: 800px) {
+    .feedbacks-section {
+        margin-top: 20px;
+        padding: 15px 0;
+    }
+    
+    .feedbacks-header {
+        margin-bottom: 15px;
+    }
+    
+    .feedbacks-controls {
+        display: none;
+    }
+    
+    .youtube-cards-container {
+        gap: 12px;
+    }
+    
+    .youtube-card {
+        width: 220px;
+        height: 135px;
+    }
+    
+    .youtube-thumbnail {
+        height: 80px;
+    }
+    
+    .play-button {
+        width: 28px;
+        height: 28px;
+    }
+    
+    .play-button::after {
+        border-left: 7px solid white;
+        border-top: 4px solid transparent;
+        border-bottom: 4px solid transparent;
+    }
+    
+    .youtube-info {
+        padding: 6px;
+    }
+    
+    .youtube-title {
+        font-size: 10px;
+    }
+    
+    .youtube-channel {
+        font-size: 8px;
+    }
+    
+    .youtube-meta {
+        font-size: 7px;
+    }
 }
